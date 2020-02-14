@@ -27,6 +27,7 @@
 		F50F42EC233B9F3E000CB329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F518B77623647BF7003FE2D5 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		F518B77823647D3E003FE2D5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F544ECC723F62E4100E81777 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F56215822381133300F28426 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,12 +62,13 @@
 			isa = PBXGroup;
 			children = (
 				F56215822381133300F28426 /* Theme.swift */,
-				F50F42F2233BA2A6000CB329 /* Supporting Files */,
 				F50F42E2233B9F3B000CB329 /* ViewController.swift */,
 				F518B77623647BF7003FE2D5 /* Concentration.swift */,
 				F518B77823647D3E003FE2D5 /* Card.swift */,
 				F50F42E4233B9F3B000CB329 /* Main.storyboard */,
+				F50F42F2233BA2A6000CB329 /* Supporting Files */,
 				F50F42EC233B9F3E000CB329 /* Info.plist */,
+				F544ECC723F62E4100E81777 /* README.md */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
