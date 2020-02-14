@@ -45,6 +45,7 @@
 		F50F42D4233B9F3B000CB329 = {
 			isa = PBXGroup;
 			children = (
+				F544ECC723F62E4100E81777 /* README.md */,
 				F50F42DF233B9F3B000CB329 /* Concentration */,
 				F50F42DE233B9F3B000CB329 /* Products */,
 			);
@@ -68,7 +69,6 @@
 				F50F42E4233B9F3B000CB329 /* Main.storyboard */,
 				F50F42F2233BA2A6000CB329 /* Supporting Files */,
 				F50F42EC233B9F3E000CB329 /* Info.plist */,
-				F544ECC723F62E4100E81777 /* README.md */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
