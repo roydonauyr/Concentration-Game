@@ -18,20 +18,20 @@ class Theme{
         case FoodEmoji
     }
     
-    private func ChooseRandomTheme(by ChosenTheme: Theme) ->[String]{
+    private func ChooseRandomTheme(by ChosenTheme: Theme) ->String{
         switch ChosenTheme{
         case .HalloweenEmoji:
-            return ["😈","🤡","🎃","👾","💀","☠️","👽","🤖","🧜🏻‍♂️","🧚🏻‍♀️"]
+            return "😈🤡🎃👾💀☠️👽🤖🧜🏻‍♂️🧚🏻‍♀️"
         case .AnimalsEmoji:
-            return ["🐶","🐱","🐭","🐹","🐼","🐨","🐯","🦁","🐮","🐷"]
+            return "🐶🐱🐭🐹🐼🐨🐯🦁🐮🐷"
         case .FacesEmoji:
-            return ["😀","😃","😫","😴","🥺","😭","😔","😤","😇","🙃"]
+            return "😀😃😫😴🥺😭😔😤😇🙃"
         case .SportsEmoji:
-            return ["⚽️","🏀","🏈","🥎","🥏","🏑","🥅","⛳️","🏹","🏐"]
+            return "⚽️🏀🏈🥎🥏🏑🥅⛳️🏹🏐"
         case .VehiclesEmoji:
-            return ["🚗","🚕","🚙","🚌","🚎","🏎","🚓","🚑","🚒","🚐"]
+            return "🚗🚕🚙🚌🚎🏎🚓🚑🚒🚐"
         case .FoodEmoji:
-            return ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈"]
+            return "🍏🍎🍐🍊🍋🍌🍉🍇🍓🍈"
         }
     
     }
@@ -42,7 +42,7 @@ class Theme{
         return RandomTheme[RandomTheme.count.arc4random]
     }
     
-    func ChooseRandomThemeIcons() ->[String]{
+    func ChooseRandomThemeIcons() ->String{
         return ChooseRandomTheme(by: random())
     }
 

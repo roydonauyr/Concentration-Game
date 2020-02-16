@@ -78,10 +78,10 @@ class ViewController: UIViewController
     
     private func emoji(for card: Card) -> String {
         if emoji[card] == nil,emojiChoices.count > 0 {       // You can place two ifs on the same line
-            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4random)
+            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random) //Strings characters are accessed by index instead of int
+            emoji[card] = String(emojiChoices.remove(at: randomStringIndex)) //makes the character type into a String type
         }
-        return emoji[card] ?? "?"  // if emoji[card.identifier] != nil {      //returns an optional due to dictionary
-                                              //return emoji[card.identifier]! } else { return "?" }
+        return emoji[card] ?? "?"  // if emoji[card.identifier] != nil {      //returns an optional due to dictionary, return                                                                                 emoji[card.identifier]! } else { return "?" }
     }
 }
 
