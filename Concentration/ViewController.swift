@@ -74,13 +74,13 @@ class ViewController: UIViewController
     private var theme = Theme()
     private lazy var emojiChoices = theme.ChooseRandomThemeIcons()
     
-    private var emoji = [Int:String]()
+    private var emoji = [Card:String]()
     
     private func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil,emojiChoices.count > 0 {       // You can place two ifs on the same line
-            emoji[card.identifier] = emojiChoices.remove(at: emojiChoices.count.arc4random)
+        if emoji[card] == nil,emojiChoices.count > 0 {       // You can place two ifs on the same line
+            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4random)
         }
-        return emoji[card.identifier] ?? "?"  // if emoji[card.identifier] != nil {      //returns an optional due to dictionary
+        return emoji[card] ?? "?"  // if emoji[card.identifier] != nil {      //returns an optional due to dictionary
                                               //return emoji[card.identifier]! } else { return "?" }
     }
 }

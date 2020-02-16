@@ -8,11 +8,23 @@
 
 import Foundation
 
-struct Card
+struct Card: Hashable //makes cards have its own unique hash, NOTE: Equatable is already inherited by Hashable
 {
-    var isFaceUp = false
-    var isMatched = false
-    var identifier: Int
+    
+    public func hash(into hasher: inout Hasher){ //new way of implementing hashing
+        hasher.combine(identifier)
+    }
+    
+    //var hashValue:Int {return identifier}
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool{ //checks the if identifier of cards are equal
+        return lhs.identifier == rhs.identifier
+    }
+    
+    
+    public var isFaceUp = false
+    public var isMatched = false
+    private var identifier: Int
     
     private static var identifierFactory = 0
     
