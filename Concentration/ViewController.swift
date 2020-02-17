@@ -17,17 +17,31 @@ class ViewController: UIViewController
     }
     private(set) var flipCount = 0 {
         didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
+           updateFlipCountLabel()
         }
     }
     
+    private func updateFlipCountLabel(){
+        let attributes: [NSAttributedString.Key: Any] = [ // Dictionary of attributes with type Any, NOTE: Do not use Any in                                                           data structures
+        .strokeWidth : 5.0,
+        .strokeColor : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1) //If you put type Any, color literal does not appear unless you set it as type Color first
+        ]
+        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLabel.attributedText = attributedString
+        
+    }
+        
     private(set) var GameScore = 0 {
         didSet {
             Score.text = "Score: \(GameScore)"
         }
     }
     
-    @IBOutlet private weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel!{ //Can call didSet as at the start this sets the flipCount (Outlet)
+        didSet{
+            updateFlipCountLabel()
+        }
+    }
     
     @IBOutlet private weak var Score: UILabel!
     
