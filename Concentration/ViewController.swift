@@ -67,7 +67,7 @@ class ViewController: UIViewController
     }
     
     
-    private func updateViewFromModel() {
+    private func updateViewFromModel() { //updates the view after Model sets each card to isFaceUp or !isFaceUp
         GameScore = game.ScoreCount
         flipCount = game.flips
         for index in cardButtons.indices{

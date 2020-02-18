@@ -18,17 +18,22 @@ struct Concentration
     
     private var indexOfOneAndOnlyFaceUpCard: Int? { //for var swift already knows it is mutating
         get{
-            var foundIndex: Int?
-            for index in cards.indices{
-                if cards[index].isFaceUp {
-                    if foundIndex == nil{
-                        foundIndex = index
-                    }else {
-                        return nil // this is when there are two face up cards
-                    }
-                }
-            }
-            return foundIndex
+            return cards.indices.filter{ cards[$0].isFaceUp }.oneAndOnly //returns the first element in array if there is only one element inside, else nil
+            //cards.indices.filter{ cards[$0].isFaceUp } is an array of cards that are face up (throws those that are true into an array)
+            // oneAndOnly variable is an extension of protocol collection
+            
+         
+          //  var foundIndex: Int?
+          //  for index in cards.indices{
+          //      if cards[index].isFaceUp {
+          //          if foundIndex == nil{
+          //              foundIndex = index
+          //          }else {
+          //              return nil // this is when there are two face up cards
+          //          }
+          //      }
+          //  }
+          //  return foundIndex
         }
         set{
             for index in cards.indices{
@@ -75,6 +80,10 @@ struct Concentration
             cards.shuffle()
         }
     }
-    
-    
+}
+
+extension Collection { //extends Collection Protocol
+    var oneAndOnly: Element?{
+        return count == 1 ? first: nil  //if number of element in array = 1, it returns that element into var oneAndOnly
+    }
 }
